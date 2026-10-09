@@ -28,7 +28,7 @@ SixLabors.Fonts is a cross-platform library for loading fonts (TrueType, OpenTyp
 
 ```
 dotnet build -c Release
-dotnet test tests/SixLabors.Fonts.Tests/SixLabors.Fonts.Tests.csproj -c Release -f net8.0
+dotnet test tests/SixLabors.Fonts.Tests/SixLabors.Fonts.Tests.csproj -c Release -f net10.0
 ```
 
 ## Contributing

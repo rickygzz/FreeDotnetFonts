@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net8.0;net472</TargetFrameworks>
+    <TargetFrameworks>net10.0;net8.0;net472</TargetFrameworks>
     <LangVersion>latest</LangVersion>
     <DebugSymbols>True</DebugSymbols>
     <Platforms>AnyCPU;x64;x86</Platforms>

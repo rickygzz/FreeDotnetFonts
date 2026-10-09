@@ -19,8 +19,11 @@ jobs:
       matrix:
         include:
           - os: windows-latest
-            framework: net8.0
+            framework: net10.0
           - os: ubuntu-latest
+            framework: net10.0
+          # .NET 8 is supported until November 2026; remove this entry (and net8.0 from the test project) after that.
+          - os: windows-latest
             framework: net8.0
           - os: windows-latest
             framework: net472
@@ -38,7 +41,9 @@ jobs:
       - name: DotNet Setup
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 8.0.x
+          dotnet-version: |
+            8.0.x
+            10.0.x
 
       - name: DotNet Build
         run: dotnet build tests/SixLabors.Fonts.Tests/SixLabors.Fonts.Tests.csproj -c Release -f ${{ matrix.framework }}
@@ -57,7 +62,7 @@ jobs:
       - name: DotNet Setup
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 8.0.x
+          dotnet-version: 10.0.x
 
       # Packages are published to nuget.org manually; CI only builds them for download.
       - name: DotNet Pack

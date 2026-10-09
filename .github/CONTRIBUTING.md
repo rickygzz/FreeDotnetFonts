@@ -17,7 +17,7 @@ FreeDotnetFonts is a community-maintained fork of SixLabors.Fonts 1.0.1. Its goa
 
 ```
 dotnet build -c Release
-dotnet test tests/SixLabors.Fonts.Tests/SixLabors.Fonts.Tests.csproj -c Release -f net8.0
+dotnet test tests/SixLabors.Fonts.Tests/SixLabors.Fonts.Tests.csproj -c Release -f net10.0
 ```
 
 ## Reporting security issues
