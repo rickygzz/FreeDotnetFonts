@@ -12,7 +12,7 @@
 
   <!--Set product category-->
   <PropertyGroup>
-    <SixLaborsProjectCategory>samples</SixLaborsProjectCategory>
+    <FreeDotnetProjectCategory>samples</FreeDotnetProjectCategory>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 

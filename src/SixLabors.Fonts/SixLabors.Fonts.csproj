@@ -4,17 +4,20 @@
     <AssemblyName>SixLabors.Fonts</AssemblyName>
     <AssemblyTitle>SixLabors.Fonts</AssemblyTitle>
     <RootNamespace>SixLabors.Fonts</RootNamespace>
-    <PackageId>SixLabors.Fonts</PackageId>
-    <PackageIcon>sixlabors.fonts.128.png</PackageIcon>
+    <PackageId>FreeDotnetFonts</PackageId>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <RepositoryUrl Condition="'$(RepositoryUrl)' == ''">https://github.com/SixLabors/Fonts/</RepositoryUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/rickygzz/FreeDotnetFonts</RepositoryUrl>
     <PackageProjectUrl>$(RepositoryUrl)</PackageProjectUrl>
     <PackageTags>font;truetype;opentype;woff;woff2</PackageTags>
-    <Description>A cross-platform library for loading and laying out fonts for processing and measuring; written in C#</Description>
+    <Description>Community-maintained, Apache-2.0 licensed fork of SixLabors.Fonts 1.0.1. Assembly name and namespaces are unchanged (drop-in replacement for SixLabors.Fonts 1.0.x). Not affiliated with or endorsed by Six Labors.</Description>
     <TargetFrameworks>netcoreapp3.1;netstandard2.1;netstandard2.0</TargetFrameworks>
     <Nullable>enable</Nullable>
-    <!--Prevent version conflicts in DrawWithImageSharp-->
-    <AssemblyVersion Condition="'$(IsContinuousIntegration)'==''">1.0.0.0</AssemblyVersion>
+    <!-- FreeDotnetFonts: fixed versions. AssemblyVersion stays 1.0.0.0 to match SixLabors.Fonts 1.x for binary compatibility. -->
+    <MinVerSkip>true</MinVerSkip>
+    <Version>1.0.2</Version>
+    <FileVersion>1.0.2.0</FileVersion>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -24,7 +27,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\shared-infrastructure\branding\icons\fonts\sixlabors.fonts.128.png" Pack="true" PackagePath="" />
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="" Visible="false" />
+    <None Include="..\..\NOTICE" Pack="true" PackagePath="" Visible="false" />
+    <None Include="PackageReadme.md" Pack="true" PackagePath="README.md" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFrameworkIdentifier)' == '.NETStandard' ">

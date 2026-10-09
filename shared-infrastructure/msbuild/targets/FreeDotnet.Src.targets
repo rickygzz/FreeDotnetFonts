@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+
+  <!-- Empty target so that `dotnet test` will work on the solution -->
+  <!-- https://github.com/Microsoft/vstest/issues/411 -->
+  <Target Name="VSTest" Condition="'$(IsTestProject)' == 'true'"/>
+
+  <ItemGroup>
+    <!-- Shared config files that have to exist at root level. -->
+    <FreeDotnetConfigFilesToCopy Include="$(MSBuildThisFileDirectory)..\..\.editorconfig;$(MSBuildThisFileDirectory)..\..\.gitattributes;" />
+  </ItemGroup>
+
+  <!-- Copy the config files on src build. -->
+  <Target Name="FreeDotnetCopyConfigFiles" BeforeTargets="Build" Condition="'$(FreeDotnetDisableConfigCopy)' == ''">
+    <Copy SourceFiles="@(FreeDotnetConfigFilesToCopy)"
+          SkipUnchangedFiles = "true"
+          DestinationFolder="$(FreeDotnetSolutionDirectory)" />
+  </Target>
+
+</Project>

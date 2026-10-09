@@ -1,11 +1,9 @@
-### Prerequisites
-
-- [ ] I have written a descriptive pull-request title
-- [ ] I have verified that there are no overlapping [pull-requests](https://github.com/SixLabors/Fonts/pulls) open
-- [ ] I have verified that I am following matches the existing coding patterns and practice as demonstrated in the repository. These follow strict Stylecop rules :cop:.
-- [ ] I have provided test coverage for my change (where applicable)
-
 ### Description
-<!-- A description of the changes proposed in the pull-request -->
 
-<!-- Thanks for contributing to SixLabors.Fonts! -->
+<!-- What does this change, and why? Link any related issue or advisory. -->
+
+### Checklist
+
+- [ ] The change targets the 1.0.x API and keeps binary compatibility (assembly name, version 1.0.0.0, public API).
+- [ ] Tests are added or updated, and `dotnet test` passes.
+- [ ] No code is copied from SixLabors.Fonts 2.0 or later, which use the Six Labors Split License.
