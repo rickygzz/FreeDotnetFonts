@@ -953,7 +953,8 @@ namespace UnicodeTrieGenerator
 
             var assemblyFile = new FileInfo(assemblyLocation);
 
-            DirectoryInfo directory = assemblyFile.Directory;
+            DirectoryInfo? directory = assemblyFile.Directory
+                ?? throw new Exception($"Unable to find SixLabors solution directory from {assemblyLocation}!");
 
             while (!directory.EnumerateFiles(SixLaborsSolutionFileName).Any())
             {
