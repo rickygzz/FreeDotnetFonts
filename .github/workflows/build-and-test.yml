@@ -9,6 +9,9 @@ on:
       - main
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   build:
     strategy:
@@ -63,5 +66,5 @@ jobs:
       - name: Upload Package
         uses: actions/upload-artifact@v4
         with:
-          name: nupkg
+          name: FreeDotnetFonts-nupkg
           path: artifacts/nupkg/*.nupkg
